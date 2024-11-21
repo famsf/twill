@@ -13,6 +13,8 @@ class File extends Model
         'uuid',
         'filename',
         'size',
+        'width',
+        'height',
     ];
 
     protected $videoFilesFormats = ['mp4', 'webm', 'ogg'];
