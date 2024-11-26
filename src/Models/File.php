@@ -15,6 +15,7 @@ class File extends Model
         'size',
         'width',
         'height',
+        'duration',
     ];
 
     protected $videoFilesFormats = ['mp4', 'webm', 'ogg'];
