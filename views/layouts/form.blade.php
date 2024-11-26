@@ -62,7 +62,7 @@
                                   custom-permalink="{{ $customPermalink ?? '' }}"
                                   localized-permalinkbase="{{ json_encode($localizedPermalinkBase ?? '') }}"
                                   localized-custom-permalink="{{ json_encode($localizedCustomPermalink ?? '') }}"
-                                  slot="title" @if($createWithoutModal ?? false) :show-modal="true"
+                                  slot="title" @if(($createWithoutModal ?? false) && ($showTitleModal ?? true)) :show-modal="true"
                                   @endif @if(isset($editModalTitle)) modal-title="{{ $editModalTitle }}" @endif>
                     <template slot="modal-form">
                         @partialView(($moduleName ?? null), 'create')
