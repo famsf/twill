@@ -57,8 +57,7 @@
   import a17Tablerow from '@/components/table/TableRow.vue'
   import a17Spinner from '@/components/Spinner.vue'
 
-  import ACTIONS from '@/store/actions'
-  import { DATATABLE, MEDIA_LIBRARY } from '@/store/mutations'
+  import { DATATABLE } from '@/store/mutations'
 
   export default {
     name: 'A17DamDataTable',
