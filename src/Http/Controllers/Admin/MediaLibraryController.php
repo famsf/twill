@@ -187,6 +187,11 @@ class MediaLibraryController extends ModuleController implements SignUploadListe
 
         [$w, $h] = getimagesize($uploadedFile->path());
 
+        if ($request->input('width') && $request->input('height')) {
+            $w = $request->input('width');
+            $h = $request->input('height');
+        }
+
         $uploadedFile->storeAs($fileDirectory, $filename, $disk);
 
         $fields = [
