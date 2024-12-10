@@ -21,7 +21,7 @@ trait HandleRevisions
     public function hydrateHandleRevisions(TwillModelContract $object, array $fields): TwillModelContract
     {
         foreach ($this->getRepeaters() as $repeater) {
-            $this->hydrateRepeater($object, $fields, $repeater['relation'], $repeater['model']);
+            $this->hydrateRepeater($object, $fields, $repeater['relation'], $repeater['model'], $repeater['repeaterName']);
         }
 
         foreach ($this->getBrowsers() as $browser) {
@@ -188,6 +188,7 @@ trait HandleRevisions
         if (!$repeaterName) {
             $repeaterName = $relationship;
         }
+
 
         $relationFields = $fields['repeaters'][$repeaterName] ?? [];
 
