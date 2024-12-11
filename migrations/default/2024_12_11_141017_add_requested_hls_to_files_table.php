@@ -14,7 +14,7 @@ return new class extends Migration
         $twillFilesTable = config('twill.files_table', 'twill_files');
 
         Schema::table($twillFilesTable, function (Blueprint $table) {
-            $table->boolean('requested_hls')->default('false');
+            $table->boolean('requested_hls')->default(false);
         });
     }
 
